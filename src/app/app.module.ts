@@ -11,6 +11,8 @@ import { DetailsComponent } from './pages/details/details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {ComponentsModule} from 'src/app/components/components.module';
 import { CapitalLetterPipe } from './pipes/capital-letter.pipe';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { CapitalLetterPipe } from './pipes/capital-letter.pipe';
     GalleryComponent,
     DetailsComponent,
     CapitalLetterPipe,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
