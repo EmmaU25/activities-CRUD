@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKeyWeather: '35426e176d94fbf319231753699abb54',
+  apiActivities: "https://activities-app-test.herokuapp.com/"
 };
 
 /*
