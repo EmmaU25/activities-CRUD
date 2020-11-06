@@ -46,4 +46,9 @@
       <div *ngIf="!flag">
         cargando...
       </div>
+
+
+      <div class="mt-4" *ngIf="ide != ''">
+        <button type="button" class="btn btn-danger btn-block " (click)="delete()">Delete</button>
+      </div>
 </div>

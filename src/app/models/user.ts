@@ -4,10 +4,10 @@ export class User {
    password: string
    types: string;
    
-   constructor(user: User){
-    this.uid = new Date().getTime();
-    this.email = user.email;
-    this.password = user.password;
-    this.types = user.types;
- }
+    constructor(user: User) {
+        this.uid = new Date().getTime();
+        this.email = user.email;
+        this.password = user.password;
+        this.types = user.types;
+    }
 }

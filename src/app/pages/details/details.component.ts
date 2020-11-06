@@ -69,7 +69,8 @@ export class DetailsComponent implements OnInit {
   delete(){
     this.service.deleteByID(this.ide).subscribe(res =>{
       this.refresh();
-    })
+    });
+    this.router.navigateByUrl('/activities');
   }
 
   refresh() {
