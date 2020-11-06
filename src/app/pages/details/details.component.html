@@ -1,1 +1,49 @@
-<p>details works!</p>
+<div class="container">
+    <form [formGroup]="forma" (ngSubmit)="save()" *ngIf="flag">
+    
+        <div>
+          <div  class="invisible">
+            <input formControlName="id"/>
+          </div>
+    
+          <div>
+            <label position="floating" >Description</label>
+            <input formControlName="descripcion" class="form-control" required/>
+          </div>
+          <span *ngIf="getDescripcionInvalid()">
+            <!-- <ion-icon name="alert-circle"></ion-icon> -->
+            Please enter a description
+          </span>
+        </div>
+        <div>
+          <div>
+            <label position="floating"  >Categoria</label>
+            <input formControlName="categoria" class="form-control" required/>
+          </div>
+          <span *ngIf="getCategoriaInvalid()">
+            <!-- <ion-icon name="alert-circle"></ion-icon> -->
+            Please enter a categoria
+          </span>
+        </div>
+        <div>
+          <div>
+            <label position="floating">MM/DD/YYYY</label>
+            <input type="date"  formControlName="fecha" class="form-control">
+            <!-- <ion-datetime formControlName="fecha" pickerFormat="DD MMMM YYYY" displayFormat="DD/MM/YYYY" min="2000-01-01" max="2021-12-31" ></ion-datetime> -->
+          </div>
+          <span *ngIf="getfechaInvalid()">
+            <!-- <ion-icon name="alert-circle"></ion-icon> -->
+            Please enter a date
+          </span>
+        </div>
+        <div class="mt-4 ">
+          <button color="dark" type="submit"  class="btn btn-primary btn-block">
+            {{ide !=  '' ? 'Update' : 'Create' }}
+          </button>
+        </div>
+      </form>
+    
+      <div *ngIf="!flag">
+        cargando...
+      </div>
+</div>

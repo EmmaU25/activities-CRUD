@@ -1,1 +1,23 @@
-<p>weather works!</p>
+<div class="container">
+    <div class="card mt-4">
+        <div class="card-header">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-thermometer" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M6 2a2 2 0 1 1 4 0v7.627a3.5 3.5 0 1 1-4 0V2zm2-1a1 1 0 0 0-1 1v7.901a.5.5 0 0 1-.25.433A2.499 2.499 0 0 0 8 15a2.5 2.5 0 0 0 1.25-4.666.5.5 0 0 1-.25-.433V2a1 1 0 0 0-1-1z"/>
+                <path d="M9.5 12.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+              </svg> {{service.city}}'s Weather in {{days[day]}}, {{dateNumber}}
+        </div>
+        <div class="card-body text-center">
+            <section id="temp-display">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cloud-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"/>
+                  </svg> <span id="current-temp">{{dateae.main.temp}}</span>
+            </section>
+          <div class="mb-3"><strong>Min Temp </strong>{{dateae.main.temp_min}} °C Min</div>
+          <div class="mb-3"><strong>Max Temp </strong>{{dateae.main.temp_max}}°C Max</div>
+          <div class="mb-3"><strong>Pressure</strong> {{dateae.main.pressure}} Pa</div>
+          <div class="mb-3"><strong>Humidity </strong>{{dateae.main.humidity}} M³</div>
+          <div class="mb-3"><strong>Wind Speed </strong>{{dateae.wind.speed}} m/s</div>
+          <div class="mb-3"><strong>Clouds </strong> {{dateae.clouds.all}} %</div>
+        </div>
+      </div>
+</div>

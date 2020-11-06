@@ -1,1 +1,14 @@
-<p>charts works!</p>
+<div class="container">
+    <div class="ion-text-center">
+        <h3>TOP 5 ACTIVITIES</h3>
+      </div>
+      
+      <div class="chart-wrapper" *ngIf="flag">
+        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType">
+        </canvas>
+      </div>
+    
+      <div *ngIf="!flag" class="ion-text-center">
+        loading info
+      </div>
+</div>

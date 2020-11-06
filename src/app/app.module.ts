@@ -13,7 +13,8 @@ import {ComponentsModule} from 'src/app/components/components.module';
 import { CapitalLetterPipe } from './pipes/capital-letter.pipe';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,9 @@ import { RegisterComponent } from './pages/register/register.component';
     AppRoutingModule,
     NgbModule,
     ComponentsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
